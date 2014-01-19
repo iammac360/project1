@@ -26,3 +26,5 @@ config/initializers/secret_token.rb
 *.swp
 /config/clickatell.yml
 .powenv
+.ruby-version
+.ruby-gemset
