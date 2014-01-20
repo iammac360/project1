@@ -1,18 +1,24 @@
+language: ruby
 rvm:
   - 2.0.0
   - 2.1.0
   - ruby-head
-
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database project1_test;' -U postgres
 matrix:
   allow_failures:
     - rvm: ruby-head
-
 notifications:
   irc: "irc.freenode.org#project1"
   recipients:
     - iammac.dicoder@gmail.com
-    - marksargento.00@gmail.com
-
 branches:
   only:
     - master
