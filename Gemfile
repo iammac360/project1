@@ -21,6 +21,8 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+gem 'thin'
+
 gem 'pg'
 gem 'figaro'
 gem 'activeuuid'
@@ -37,6 +39,16 @@ gem 'rack-oauth2'
 gem 'devise'
 gem 'doorkeeper', '~> 0.7.0'
 gem 'friendly_id', '~> 5.0.0'
+gem 'paranoia', '~> 2.0'
+gem 'awesome_nested_set'
+gem 'foreigner'
+gem "default_value_for", "~> 3.0.0"
+gem 'enumerize'
+gem 'acts_as_list'
+gem 'paper_trail', '~> 3.0.0'
+gem 'seed-fu', github: 'mbleigh/seed-fu'
+gem 'ice_cube'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
