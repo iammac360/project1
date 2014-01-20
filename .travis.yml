@@ -1,0 +1,18 @@
+rvm:
+  - 2.0.0
+  - 2.1.0
+  - ruby-head
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
+notifications:
+  irc: "irc.freenode.org#project1"
+  recipients:
+    - iammac.dicoder@gmail.com
+    - marksargento.00@gmail.com
+
+branches:
+  only:
+    - master
